@@ -1,0 +1,14 @@
+Approach 1: to create report at the end of the test
+————————————— — — — — — — — —
+jmeter -n -t(path of .jmx file) -l(path of examples folder along with name of csv file where you want to keep the results) -e -o(path of output folder where you want to save the results)
+
+jmeter -n -t C:\Users\vbp1049\Desktop\PerfTestRun\MMS-API\POC_MMS-API.jmx -l C:\Users\vbp1049\Desktop\PerfTestRun\MMS-API\Results\Run1\RESULT.csv -e -o C:\Users\vbp1049\Desktop\PerfTestRun\MMS-API\Results\Run1\HTMLResults\
+
+
+Approach 2: create report from a standalone csv file
+———————————————— — — — — — —
+jmeter -g (path of resultant csv file) -o (path of output folder where you want to save the results)
+
+Caveat: Action to be taken after Sampler error was set to "Stop Thread" in JMETER. This is to prevent long-running of samples that encountered an error.
+
+Overall P-Count Upload Observation: Majority of the samples passed, but experienced 504/Gateway Time-out for file upload requests (Bulk and PDT). The created P-Count items still reached “Posted” status.

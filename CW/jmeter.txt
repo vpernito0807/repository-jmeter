@@ -1,0 +1,10 @@
+Approach 1: to create report at the end of the test
+————————————— — — — — — — — —
+jmeter -n -t(path of .jmx file) -l(path of examples folder along with name of csv file where you want to keep the results) -e -o(path of output folder where you want to save the results)
+
+jmeter -n -t C:\Users\vbp1049\Desktop\PerfTestRun\CW\PerformanceTestPlan_CareerWebsite.jmx -l C:\Users\vbp1049\Desktop\PerfTestRun\CW\Results\Thread5000\RESULT.csv -e -o C:\Users\vbp1049\Desktop\PerfTestRun\CW\Results\Thread5000\HTMLResults\
+
+
+Approach 2: create report from a standalone csv file
+———————————————— — — — — — —
+jmeter -g (path of resultant csv file) -o (path of output folder where you want to save the results)
